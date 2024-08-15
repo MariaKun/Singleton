@@ -1,3 +1,6 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Logger {
     protected int num = 1;
 
@@ -25,6 +28,7 @@ public class Logger {
     }
 
     public void log(String msg) {
-        System.out.println("[" + num++ + "] " + msg);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        System.out.println("[" + dtf.format(LocalDateTime.now())  + num++ + "] " + msg);
     }
 }

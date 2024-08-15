@@ -29,6 +29,6 @@ public class Logger {
 
     public void log(String msg) {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-        System.out.println("[" + dtf.format(LocalDateTime.now())  + num++ + "] " + msg);
+        System.out.println("[" + dtf.format(LocalDateTime.now())+ " "  + num++ + "] " + msg);
     }
 }
